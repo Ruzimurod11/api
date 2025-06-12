@@ -2,7 +2,7 @@ import { AxiosRequestConfig } from "axios"
 import axiosInstance from "./axios-instance"
 
 export const getRequest = (url: string, config?: AxiosRequestConfig) =>
-    axiosInstance.get(`/${url}/`, config).then((res) => res.data)
+    axiosInstance.get(`/${url}`, config).then((res) => res.data)
 
 export const postRequest = <T>(
     url: string,

@@ -58,18 +58,18 @@
 
 // my types
 export interface IProduct {
-  id: number
-  title: string
-  description: string
-  price: number
-  images: string[]
+    id: number
+    title: string
+    description: string
+    price: number
+    images: string[]
 }
 
 export interface IProductResponse {
-  products: IProduct[]
-  total: number
-  skip: number
-  limit: number
+    products: IProduct[]
+    total: number
+    skip: number
+    limit: number
 }
 
 export interface IProductDetail {
@@ -77,4 +77,20 @@ export interface IProductDetail {
     title: string
     price: number
     images: string[]
+}
+
+export interface IUser {
+    id: number
+    firstName: string
+    lastName: string
+    email: string
+    phone: string
+    image: string
+}
+
+export interface IUserResponse {
+    users: IUser[]
+    total: number
+    skip: number
+    limit: number
 }

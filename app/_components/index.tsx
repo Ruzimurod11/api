@@ -1,10 +1,12 @@
-import ParksSwiper from "./parks-swiper";
+import ProductsSwiper from "./products-swiper"
+import UsersSwiper from "./users-swiper"
 
 export default async function Index() {
     return (
-        <div>
-            <div>Hello, World!</div>
-            <ParksSwiper />
-        </div>
-    );
+        <>
+            <ProductsSwiper />
+            <hr className="my-8" />
+            <UsersSwiper />
+        </>
+    )
 }

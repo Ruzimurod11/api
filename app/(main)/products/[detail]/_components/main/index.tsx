@@ -1,7 +1,6 @@
-
-import { getReq } from "@/services/fetch-requests"
 import { PRODUCTS } from "@/constants/api-endpoints"
-
+import { getReq } from "@/services/fetch-requests"
+import { IProductDetail } from "@/types/products"
 
 interface Props {
     productID: string
@@ -15,14 +14,19 @@ const Main = async ({ productID }: Props) => {
     return (
         <>
             <h2>{product.title}</h2>
-            <h2 className="text-[clamp(1.125rem,3.2vw,1.5rem)] font-semibold lg:hidden">
-                {product.price}
-            </h2>
             <p> {product.id} </p>
-            <div>
-                <img src={product.images[0]} alt={product.title} />
-            </div>
 
+            <div>
+                <img
+                    width={280}
+                    height={280}
+                    src={product.images[0]}
+                    alt={product.title}
+                />
+                <h2 className="text-[clamp(1.125rem,3.2vw,1.5rem)] font-semibold">
+                    {product.price}
+                </h2>
+            </div>
         </>
     )
 }

@@ -1,10 +1,10 @@
-import MainLayout from "@/components/main-layout";
-import Index from "../_components";
+import MainLayout from "@/components/main-layout"
+import Index from "../_components"
 
 export default function Home() {
     return (
-        <MainLayout>
+        <MainLayout className="w-screen">
             <Index />
         </MainLayout>
-    );
+    )
 }

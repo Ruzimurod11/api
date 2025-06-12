@@ -36,7 +36,7 @@ async function request<D>(
     const queryString = new URLSearchParams(
         filteredQuery as Record<string, string>,
     ).toString()
-    const url = `${baseURL}/${endpoint}/`
+    const url = `${baseURL}/${endpoint}`
     const finalUrl = queryString ? `${url}?${queryString}` : url
 
     const res = await fetch(finalUrl, {
