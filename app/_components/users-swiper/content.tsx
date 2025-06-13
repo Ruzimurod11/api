@@ -2,7 +2,8 @@
 
 import { getArray } from "@/lib/get-array"
 import { cn } from "@/lib/utils"
-import { IUserResponse } from "@/types/products"
+import { IPaginatedUserResponse } from "@/types/common"
+import { IUser } from "@/types/products"
 import Autoplay from "embla-carousel-autoplay"
 import useEmblaCarousel from "embla-carousel-react"
 import dynamic from "next/dynamic"
@@ -12,7 +13,7 @@ import { FaAngleRight } from "react-icons/fa"
 import UserCard from "./user-card"
 
 interface Props {
-    promise: Promise<IUserResponse>
+    promise: Promise<IPaginatedUserResponse<IUser>>
     currentParkID?: string
 }
 

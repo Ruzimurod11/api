@@ -3,10 +3,9 @@ import UsersSwiper from "./users-swiper"
 
 export default async function Index() {
     return (
-        <>
+        <div>
             <ProductsSwiper />
-            <hr className="my-8" />
             <UsersSwiper />
-        </>
+        </div>
     )
 }

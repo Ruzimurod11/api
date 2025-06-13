@@ -1,6 +1,7 @@
 import { PRODUCTS } from "@/constants/api-endpoints"
 import { getReq } from "@/services/fetch-requests"
 import { IProductDetail } from "@/types/products"
+import Image from "next/image"
 
 interface Props {
     productID: string
@@ -17,7 +18,7 @@ const Main = async ({ productID }: Props) => {
             <p> {product.id} </p>
 
             <div>
-                <img
+                <Image
                     width={280}
                     height={280}
                     src={product.images[0]}

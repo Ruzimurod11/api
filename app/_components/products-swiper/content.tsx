@@ -2,7 +2,8 @@
 
 import { getArray } from "@/lib/get-array"
 import { cn } from "@/lib/utils"
-import { IProductResponse } from "@/types/products"
+import { IPaginatedResponse } from "@/types/common"
+import { IProduct } from "@/types/products"
 import Autoplay from "embla-carousel-autoplay"
 import useEmblaCarousel from "embla-carousel-react"
 import dynamic from "next/dynamic"
@@ -12,13 +13,15 @@ import { FaAngleRight } from "react-icons/fa"
 import ProductCard from "./product-card"
 
 interface Props {
-    promise: Promise<IProductResponse>
+    promise: Promise<IPaginatedResponse<IProduct>>
     currentParkID?: string
 }
 
 const Content = ({ promise, currentParkID }: Props) => {
     const data = use(promise)
+    console.log(data)
     const list = getArray(data.products)
+
     const finalList = list.filter((a) => String(a.id) !== currentParkID)
 
     const [emblaRef, emblaApi] = useEmblaCarousel(

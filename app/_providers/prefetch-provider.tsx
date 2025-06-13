@@ -9,7 +9,7 @@ interface Props {
     options?: FetcherOptions<unknown>
 }
 
-export default async function PrefetchProvider({
+export default function PrefetchProvider({
     // endpoint,
     // queryKey,
     children,

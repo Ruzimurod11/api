@@ -1,12 +1,13 @@
 import MainLayout from "@/components/main-layout"
 import { USERS } from "@/constants/api-endpoints"
 import { getReq } from "@/services/fetch-requests"
-import { IUserResponse } from "@/types/products"
+import { IPaginatedUserResponse } from "@/types/common"
+import { IUser } from "@/types/products"
 import { Suspense } from "react"
 import Content from "./content"
 
-export default function UsersPage() {
-    const promise = getReq<IUserResponse>(USERS)
+export default function UsersSwiper() {
+    const promise = getReq<IPaginatedUserResponse<IUser>>(USERS)
 
     return (
         <Suspense>

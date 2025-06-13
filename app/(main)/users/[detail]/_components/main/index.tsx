@@ -1,6 +1,7 @@
 import { USERS } from "@/constants/api-endpoints"
 import { getReq } from "@/services/fetch-requests"
 import { IUser } from "@/types/products"
+import Image from "next/image"
 
 interface Props {
     userID: string
@@ -9,15 +10,13 @@ interface Props {
 const Main = async ({ userID }: Props) => {
     const user = await getReq<IUser>(`${USERS}/${userID}`)
 
-    // const router = useRouter()  const router
-
     return (
         <>
             <h2>{user.firstName}</h2>
             <p> {user.id} </p>
 
             <div>
-                <img
+                <Image
                     width={280}
                     height={280}
                     src={user.image}

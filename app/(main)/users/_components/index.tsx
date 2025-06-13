@@ -27,9 +27,6 @@ const Users = () => {
         <>
             <h2>Users</h2>
 
-            {isLoading && <p>Loading...</p>}
-            {isError && <p>Error loading users</p>}
-
             <div className="flex flex-wrap gap-5 mt-4 md:mt-6 mb-10 rounded-2xl">
                 {list.map((user) => (
                     <UserCard key={user.id} user={user} />

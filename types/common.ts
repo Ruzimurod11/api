@@ -4,7 +4,14 @@ export interface IPaginatedResponse<T> {
     count: number
     previous: string | null
     next: string | null
-    results: T[]
+    products: T[]
+}
+
+export interface IPaginatedUserResponse<T> {
+    count: number
+    previous: string | null
+    next: string | null
+    users: T[]
 }
 
 export interface Rating {

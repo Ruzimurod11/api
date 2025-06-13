@@ -1,5 +1,6 @@
 // import useFormattedNumber from "@/hooks/use-formatted-number"
 import { IUser } from "@/types/products"
+import Image from "next/image"
 import Link from "next/link"
 import { FiArrowUpRight } from "react-icons/fi"
 
@@ -15,7 +16,9 @@ export default function UserCard({ item }: Props) {
             className="flex flex-col items-center w-[clamp(164px,20vw,auto)] rounded-[10px] shadow-[0px_3px_10px_0px_#D5D5D540]"
         >
             <div className="w-full h-[clamp(153px,20vw,277px)] bg-white flex items-center justify-center rounded-t-[10px]">
-                <img
+                <Image
+                    width={277}
+                    height={277}
                     src={item.image}
                     alt={item.firstName}
                     className="rounded-t-[10px]"

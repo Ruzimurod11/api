@@ -1,3 +1,5 @@
+"use client"
+
 import PrefetchProvider from "@/app/_providers/prefetch-provider"
 import MainLayout from "@/components/main-layout"
 import { PRODUCTS } from "@/constants/api-endpoints"
